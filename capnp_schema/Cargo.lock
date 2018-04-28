@@ -68,7 +68,9 @@ dependencies = [
  "capnp 0.8.17 (registry+https://github.com/rust-lang/crates.io-index)",
  "capnp-futures 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "capnpc 0.8.9 (registry+https://github.com/rust-lang/crates.io-index)",
+ "env_logger 0.5.9 (registry+https://github.com/rust-lang/crates.io-index)",
  "futures 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "log 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "mio-uds 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "tokio 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "tokio-core 0.1.17 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -86,16 +88,6 @@ dependencies = [
 name = "cfg-if"
 version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-
-[[package]]
-name = "core"
-version = "0.1.0"
-dependencies = [
- "env_logger 0.5.9 (registry+https://github.com/rust-lang/crates.io-index)",
- "futures 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "log 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "tokio 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
-]
 
 [[package]]
 name = "crossbeam-deque"
