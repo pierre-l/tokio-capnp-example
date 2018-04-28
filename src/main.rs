@@ -1,3 +1,5 @@
+#[macro_use] extern crate log;
+extern crate env_logger;
 extern crate tokio;
 
 use tokio::prelude::*;
@@ -5,6 +7,8 @@ use tokio::io::copy;
 use tokio::net::TcpListener;
 
 fn main() {
+    env_logger::init();
+
     // Bind the server's socket.
     let addr = "127.0.0.1:12345".parse().unwrap();
     let listener = TcpListener::bind(&addr)
@@ -12,8 +16,9 @@ fn main() {
 
     // Pull out a stream of sockets for incoming connections
     let server = listener.incoming()
-        .map_err(|e| eprintln!("accept failed = {:?}", e))
+        .map_err(|e| error!("accept failed = {:?}", e))
         .for_each(|sock| {
+            info!("Connection received.");
             // Split up the reading and writing parts of the
             // socket.
             let (reader, writer) = sock.split();
@@ -24,9 +29,9 @@ fn main() {
 
             // ... after which we'll print what happened.
             let handle_conn = bytes_copied.map(|amt| {
-                println!("wrote {:?} bytes", amt)
+                info!("wrote {:?} bytes", amt)
             }).map_err(|err| {
-                eprintln!("IO error {:?}", err)
+                error!("IO error {:?}", err)
             });
 
             // Spawn the future as a concurrent task.
