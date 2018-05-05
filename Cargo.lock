@@ -91,10 +91,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 name = "core"
 version = "0.1.0"
 dependencies = [
+ "bytes 0.4.7 (registry+https://github.com/rust-lang/crates.io-index)",
+ "capnp 0.8.17 (registry+https://github.com/rust-lang/crates.io-index)",
+ "capnp-futures 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "capnp_schema 0.1.0",
  "env_logger 0.5.9 (registry+https://github.com/rust-lang/crates.io-index)",
  "futures 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "tokio 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
+ "tokio-io 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]

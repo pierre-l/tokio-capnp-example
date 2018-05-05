@@ -6,9 +6,9 @@ extern crate capnpc;
 extern crate capnp_futures;
 extern crate futures;
 
-mod addressbook_capnp;
-mod capnproto_tests;
+pub mod addressbook_capnp;
 
+/// Generates the Rust code from the CapnProto schema.
 fn main() {
     ::capnpc::CompilerCommand::new()
         .file("addressbook.capnp")

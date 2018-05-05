@@ -8,3 +8,8 @@ tokio = "0.1.5"
 log = "0.4"
 env_logger = "0.5.9"
 futures = "0.2.1"
+capnp_schema = { path = "../capnp_schema" }
+capnp = "0.8.17"
+capnp-futures = "0.1.1"
+bytes = "0.4.7"
+tokio-io = "0.1.6"

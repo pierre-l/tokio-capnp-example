@@ -3,6 +3,10 @@ name = "capnp_schema"
 version = "0.1.0"
 authors = ["pierre <pierrelarger@gmail.com>"]
 
+[lib]
+name = "capnp_schema"
+path = "src/lib.rs"
+
 [dependencies]
 tokio = "0.1.5"
 tokio-core = "0.1.17"
